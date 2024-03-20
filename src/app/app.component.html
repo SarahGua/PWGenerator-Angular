@@ -2,20 +2,20 @@
 
 <div>
   <label>Enter Length</label>
-  <input />
+  <input (input)="onChangeLength($event)" />
 </div>
 
 <div>
   <label>Use Letters</label>
-  <input type="checkbox" />
+  <input (change)="onChangeUseLetters()" type="checkbox" />
 </div>
 <div>
   <label>Use Numbers</label>
-  <input type="checkbox" />
+  <input (change)="onChangeUseNumbers()" type="checkbox" />
 </div>
 <div>
   <label>Use Symbols</label>
-  <input type="checkbox" />
+  <input (change)="onChangeUseSymbols()" type="checkbox" />
 </div>
 
 <div>
@@ -24,5 +24,8 @@
 
 <div>
   <label>Your password</label>
-  <input />
+  <input [value]="password" />
 </div>
+
+<!-- INTERPOLATION -->
+{{ password }}
