@@ -45,10 +45,12 @@
         Generate!
       </button>
 
-      <div class="box">
-        <label>Your Password</label>
-        <input class="input" [value]="password" />
-      </div>
+      <ng-template [ngIf]="password">
+        <div class="box">
+          <label>Your Password</label>
+          <input class="input" [value]="password" />
+        </div>
+      </ng-template>
     </div>
   </div>
 </div>
