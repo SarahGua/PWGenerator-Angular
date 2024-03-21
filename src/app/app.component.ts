@@ -16,12 +16,20 @@ export class AppComponent {
   includeLetters = false
   password = ''
 
-  onChangeLength(value: Event){
-    const target = event.target as HTMLInputElement
-    const parsedValue = parseInt(value)
+  // onChangeLength(value: string){
+  //   const parsedValue = parseInt(value)
 
-    if(!isNaN(parsedValue)){
-      this.length = parsedValue
+  //   if(!isNaN(parsedValue)){
+  //     this.length = parsedValue
+  //   }
+  // }
+
+  onChangeLength(event: Event){
+    const target = event.target as HTMLInputElement;
+    const parsedValue = parseInt(target.value);
+
+    if (!isNaN(parsedValue)) {
+      this.length = parsedValue;
     }
   }
 
